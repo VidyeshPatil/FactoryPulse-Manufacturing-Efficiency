@@ -1,0 +1,299 @@
+{
+  "trained_rows": 100000,
+  "train_rows": 80000,
+  "test_rows": 20000,
+  "primary": "Random Forest",
+  "class_distribution": {
+    "Low": 77825,
+    "Medium": 19189,
+    "High": 2986
+  },
+  "models": [
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.93695,
+      "macro_f1": 0.8707636243063165,
+      "weighted_f1": 0.9396730342533183,
+      "roc_auc": 0.9911099230295327,
+      "cv_mean": 0.8659533045935843,
+      "cv_std": 0.006089886734215345,
+      "train_seconds": 4.1,
+      "interpretability": "High",
+      "per_class": {
+        "Low": {
+          "precision": 0.9941240037822504,
+          "recall": 0.9435861273158536,
+          "f1": 0.968196020391383,
+          "support": 15599
+        },
+        "Medium": {
+          "precision": 0.7914746543778802,
+          "recall": 0.9060933790556581,
+          "f1": 0.8449145246587135,
+          "support": 3791
+        },
+        "High": {
+          "precision": 0.6850117096018735,
+          "recall": 0.9590163934426229,
+          "f1": 0.7991803278688525,
+          "support": 610
+        }
+      },
+      "confusion": [
+        [
+          14719,
+          880,
+          0
+        ],
+        [
+          87,
+          3435,
+          269
+        ],
+        [
+          0,
+          25,
+          585
+        ]
+      ],
+      "score": 0.8646737375721011
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "roc_auc": 1.0,
+      "cv_mean": 0.9990653415605008,
+      "cv_std": 0.000515937674266755,
+      "train_seconds": 40.8,
+      "interpretability": "Medium",
+      "per_class": {
+        "Low": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 15599
+        },
+        "Medium": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3791
+        },
+        "High": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 610
+        }
+      },
+      "confusion": [
+        [
+          15599,
+          0,
+          0
+        ],
+        [
+          0,
+          3791,
+          0
+        ],
+        [
+          0,
+          0,
+          610
+        ]
+      ],
+      "score": 0.9994840623257333
+    },
+    {
+      "model": "Gradient Boosting",
+      "accuracy": 0.9989,
+      "macro_f1": 0.9969535837356883,
+      "weighted_f1": 0.9989000647836889,
+      "roc_auc": 0.9999951936618053,
+      "cv_mean": 0.9965425685623868,
+      "cv_std": 0.0005877589677504685,
+      "train_seconds": 4.3,
+      "interpretability": "Low-Medium",
+      "per_class": {
+        "Low": {
+          "precision": 0.9997434581836839,
+          "recall": 0.9992948265914482,
+          "f1": 0.9995190920457825,
+          "support": 15599
+        },
+        "Medium": {
+          "precision": 0.9955298448593216,
+          "recall": 0.9986810867844896,
+          "f1": 0.9971029760337108,
+          "support": 3791
+        },
+        "High": {
+          "precision": 0.9983471074380166,
+          "recall": 0.9901639344262295,
+          "f1": 0.994238683127572,
+          "support": 610
+        }
+      },
+      "confusion": [
+        [
+          15588,
+          11,
+          0
+        ],
+        [
+          4,
+          3786,
+          1
+        ],
+        [
+          0,
+          6,
+          604
+        ]
+      ],
+      "score": 0.9963658247679379
+    }
+  ],
+  "early": {
+    "accuracy": 0.38215,
+    "macro_f1": 0.2758377984868851,
+    "roc_auc": 0.4988243860909806,
+    "majority_baseline": 0.77995
+  },
+  "importance": [
+    {
+      "feature": "Error_Rate_%",
+      "label": "Error rate",
+      "group": "Quality",
+      "importance": 0.5830209648180543,
+      "share": 0.5785389646028367
+    },
+    {
+      "feature": "Production_Speed_units_per_hr",
+      "label": "Production speed",
+      "group": "Production",
+      "importance": 0.4240913245993445,
+      "share": 0.4208311032302564
+    },
+    {
+      "feature": "Operation_Mode",
+      "label": "Operation mode",
+      "group": "Mode",
+      "importance": 0.00031740615774433767,
+      "share": 0.0003149660834534149
+    },
+    {
+      "feature": "Temperature_C",
+      "label": "Temperature",
+      "group": "Sensor",
+      "importance": 0.00010580205258144589,
+      "share": 0.00010498869448447163
+    },
+    {
+      "feature": "Network_Latency_ms",
+      "label": "Network latency",
+      "group": "Network",
+      "importance": 0.00010580205258144589,
+      "share": 0.00010498869448447163
+    },
+    {
+      "feature": "Power_Consumption_kW",
+      "label": "Power draw",
+      "group": "Sensor",
+      "importance": 0.00010580205258144589,
+      "share": 0.00010498869448447163
+    },
+    {
+      "feature": "Vibration_Hz",
+      "label": "Vibration",
+      "group": "Sensor",
+      "importance": 0.0,
+      "share": 0.0
+    },
+    {
+      "feature": "Packet_Loss_%",
+      "label": "Packet loss",
+      "group": "Network",
+      "importance": 0.0,
+      "share": 0.0
+    },
+    {
+      "feature": "Quality_Control_Defect_Rate_%",
+      "label": "Defect rate",
+      "group": "Quality",
+      "importance": 0.0,
+      "share": 0.0
+    },
+    {
+      "feature": "Predictive_Maintenance_Score",
+      "label": "Maintenance score",
+      "group": "Maintenance",
+      "importance": 0.0,
+      "share": 0.0
+    }
+  ],
+  "importance_early": [
+    {
+      "feature": "Power_Consumption_kW",
+      "label": "Power draw",
+      "group": "Sensor",
+      "importance": 0.003052392373561863,
+      "share": 0.44306087918286785
+    },
+    {
+      "feature": "Network_Latency_ms",
+      "label": "Network latency",
+      "group": "Network",
+      "importance": 0.001443938187381329,
+      "share": 0.20959052588653782
+    },
+    {
+      "feature": "Vibration_Hz",
+      "label": "Vibration",
+      "group": "Sensor",
+      "importance": 0.0011499300404274788,
+      "share": 0.16691465328098118
+    },
+    {
+      "feature": "Operation_Mode",
+      "label": "Operation mode",
+      "group": "Mode",
+      "importance": 0.0008509217608734058,
+      "share": 0.12351300139322155
+    },
+    {
+      "feature": "Packet_Loss_%",
+      "label": "Packet loss",
+      "group": "Network",
+      "importance": 0.00039214711137443753,
+      "share": 0.05692094025639165
+    },
+    {
+      "feature": "Temperature_C",
+      "label": "Temperature",
+      "group": "Sensor",
+      "importance": 0.0,
+      "share": 0.0
+    },
+    {
+      "feature": "Quality_Control_Defect_Rate_%",
+      "label": "Defect rate",
+      "group": "Quality",
+      "importance": 0.0,
+      "share": 0.0
+    },
+    {
+      "feature": "Predictive_Maintenance_Score",
+      "label": "Maintenance score",
+      "group": "Maintenance",
+      "importance": 0.0,
+      "share": 0.0
+    }
+  ],
+  "surrogate_rules": "|--- Error_Rate_% <= 5.00\n|   |--- Production_Speed_units_per_hr <= 200.00\n|   |   |--- class: 0\n|   |--- Production_Speed_units_per_hr >  200.00\n|   |   |--- Production_Speed_units_per_hr <= 400.12\n|   |   |   |--- class: 1\n|   |   |--- Production_Speed_units_per_hr >  400.12\n|   |   |   |--- Error_Rate_% <= 2.00\n|   |   |   |   |--- class: 2\n|   |   |   |--- Error_Rate_% >  2.00\n|   |   |   |   |--- class: 1\n|--- Error_Rate_% >  5.00\n|   |--- class: 0\n",
+  "rule_agreement": 0.99998,
+  "trained_at": "2026-10-09T02:27:59"
+}
